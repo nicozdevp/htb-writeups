@@ -38,11 +38,15 @@ Desglose de los parámetros utilizados:
 
 * -oN: Guarda los resultados en un archivo de texto llamado escaneo_inicial.txt para consultarlo después.
 
-Resultados del EscaneoTras finalizar el escaneo, identificamos el siguiente panorama de exposición:
+### Resultados del Escaneo
 
-PuertoProtocoloEstadoServicioNotas / Versión23TCPAbierto Telnet
+Tras finalizar el escaneo, identificamos el siguiente panorama de exposición:
 
-Conclusión del Reconocimiento: El único servicio disponible externamente es Telnet en el puerto por defecto (23). Al ser un protocolo heredado que transmite información en texto plano, se convierte inmediatamente en nuestro principal y único vector de ataque.
+| Puerto | Protocolo | Estado | Servicio | Notas / Versión |
+| :--- | :---: | :---: | :--- | :--- |
+| **23** | TCP | Abierto  | **Telnet** | Linux telnet|
+
+**Conclusión del Reconocimiento:** El único servicio disponible externamente es **Telnet** en el puerto por defecto (23). Al ser un protocolo heredado que transmite información en texto plano, se convierte inmediatamente en nuestro principal y único vector de ataque.
 
 Procedemos a interactuar con el servicio utilizando el cliente de Telnet desde nuestra terminal:
 
