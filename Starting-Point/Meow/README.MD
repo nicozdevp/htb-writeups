@@ -85,3 +85,5 @@ cat flag.txt
 2. Riesgos de servicios heredados: Telnet no debe ser utilizado en entornos de producción. Debe ser reemplazado por SSH.
 3. Mala configuración de credenciales: Dejar cuentas administrativas sin contraseña (como el usuario root en este caso) representa un compromiso crítico inmediato del sistema.
 
+![Captura de Meow](./img/meow.png)
+
