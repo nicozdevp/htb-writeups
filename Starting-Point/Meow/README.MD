@@ -5,7 +5,7 @@
 **Plataforma:** Hack The Box (Tier 0)  
 
 ## Contexto de la maquina.
-Meow es la máquina introductoria del *Starting Point* de Hack The Box. El objetivo principal de este laboratorio es familiarizarse con el proceso de conexión a la VPN de la plataforma, realizar un escaneo básico de puertos y explotar un servicio mal configurado mediante la conexión a un protocolo de administración remota heredado (Telnet) utilizando credenciales por defecto nulas.
+Meow es la máquina introductoria del *Starting Point* de Hack The Box. El objetivo principal de este laboratorio es familiarizarse con el proceso de conexión a la VPN de la plataforma, realizar un escaneo básico de puertos y explotar un servicio mal configurado mediante la conexión a un protocolo Telnet utilizando credenciales por defecto nulas.
 
 ---
 
