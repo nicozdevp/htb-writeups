@@ -1,15 +1,15 @@
 #  Cap - Hack The Box
 
 **Sistema Operativo:** Linux 🐧  
-**Dificultad:** Easy 🟢  
+**Dificultad:** Easy 
 **Dirección IP:** 10.129.26.108  
 
-## 📝 Resumen Ejecutivo
+## Contexto
 Cap es una máquina Linux de dificultad fácil que se centra en conceptos fundamentales de seguridad web y administración de sistemas. La ruta de explotación comienza identificando una vulnerabilidad de **IDOR** (Insecure Direct Object Reference) en un panel de control web, lo que permite descargar un archivo de captura de red (PCAP). Analizando el tráfico, extraemos credenciales en texto plano que nos dan acceso por SSH. Finalmente, la escalada a `root` se logra explotando una mala configuración en las **Capabilities**  del sistema operativo asignadas al binario de Python.
 
 ---
 
-## 🔍 Fase de Reconocimiento (Recon)
+##  Fase de Reconocimiento 
 
 Iniciamos comprobando la conexión y el sistema operativo de la máquina mediante el envío de un paquete ICMP.
 
@@ -26,7 +26,7 @@ nmap -p- --open -sV -sC --min-rate 5000 10.129.26.108 -oN escaneo_inicial.txt
 
  ## Resultado del escaneo
 
- PuertoProtocoloEstadoServicioNotas / Versión21TCPAbierto 🟢FTPvsftpd 3.0.322TCPAbierto 🟢SSHOpenSSH 8.2p1 Ubuntu80TCPAbierto 🟢HTTPgunicorn
+ PuertoProtocoloEstadoServicioNotas / Versión21TCPAbierto FTPvsftpd 3.0.322TCPAbierto SSHOpenSSH 8.2p1 Ubuntu80TCPAbierto HTTPgunicorn
 
 **Conclusión del Reconocimiento**: Tenemos tres vías potenciales. FTP y SSH usualmente requieren credenciales. El puerto 80  aloja una aplicación web, por lo que será nuestro vector de entrada principal para buscar vulnerabilidades.
 
