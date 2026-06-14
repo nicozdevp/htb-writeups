@@ -15,6 +15,7 @@ El primer paso de nuestra metodología consiste en verificar el enrutamiento hac
 
 ```bash
 ping 10.129.86.56
+```
 
 Al realizar el ping el TTL de respuesta cercano a 63 o 64 suele indicar que nos estamos enfrentando a un sistema operativo Linux, lo que nos ayuda a orientar nuestros próximos pasos.
 
@@ -23,6 +24,7 @@ Con la conexión verificada de forma exitosa, procedemos a realizar un escaneo a
 
 ```bash
 nmap -p- --open -sV -sC --min-rate 5000 10.129.86.56 -oN escaneo_inicial.txt
+```
 
 Desglose de los parámetros utilizados:
 
@@ -46,6 +48,7 @@ Procedemos a interactuar con el servicio utilizando el cliente de Telnet desde n
 
 ```bash
 telnet 10.129.86.56
+```
 
 Al establecer la conexión, el servidor nos presenta un banner de bienvenida y nos solicita un usuario para iniciar sesión (login:).
 
@@ -57,6 +60,7 @@ Contraseña: (Ninguna / En blanco)
 
 ```bash
 login: root
+```
 
 
 ##  Escalada de Privilegios y Flag
@@ -70,6 +74,7 @@ whoami
 ls
 # Resultado: flag.txt snap
 cat flag.txt
+```
 
 ##  Conclusiones y Aprendizaje
 1. Importancia del escaneo inicial: Identificar puertos abiertos es el primer paso crítico en cualquier auditoría.
