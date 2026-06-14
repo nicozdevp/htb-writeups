@@ -109,3 +109,5 @@ Prevención de IDOR: Los sistemas no deben confiar únicamente en el identificad
 Peligro de protocolos en texto plano: El uso de FTP no seguro permite la interceptación de tráfico. El archivo de captura (PCAP) demostró cómo un atacante en la red puede leer credenciales si no hay cifrado (como en SFTP).
 
 Auditoría de Capabilities: Asignar cap_setuid a un intérprete potente como Python equivale a otorgar acceso directo a root a cualquier usuario del sistema. El principio de menor privilegio debe aplicarse rigurosamente al configurar entornos Linux.
+
+![Captura de Cap](./img/cap.png)
